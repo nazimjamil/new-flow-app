@@ -2,19 +2,36 @@
 
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import * as packageJson from './package.json';
 
 const config = {
   devtool: 'inline-source-map',
   entry: './app/index.jsx',
   module: {
-    rules: [{
-      exclude: /node_modules/,
-      test: /\.jsx?$/,
-      use: {
-        loader: 'babel-loader',
+    rules: [
+      {
+        exclude: /node_modules/,
+        test: /\.jsx?$/,
+        use: {
+          loader: 'babel-loader',
+        },
+      }, {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              sourceMap: true,
+            },
+          },
+          'postcss-loader',
+        ],
       },
-    }],
+    ],
   },
   output: {
     filename: 'bundle.js',
@@ -24,6 +41,10 @@ const config = {
     new HtmlWebpackPlugin({
       template: 'template.html',
       title: packageJson.name,
+    }),
+    new MiniCssExtractPlugin({
+      chunkFilename: '[id].css',
+      filename: '[name].css',
     }),
   ],
   resolve: {
