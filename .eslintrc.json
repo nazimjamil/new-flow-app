@@ -1,0 +1,36 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "extends": "airbnb",
+  "globals": {
+    "describe": true,
+    "document": true,
+    "expect": true,
+    "it": true
+  },
+  "rules": {
+    "arrow-body-style": 1,
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": true
+    }],
+    "import/prefer-default-export": 0,
+    "newline-after-var": ["error", "always"],
+    "sort-keys": ["error", "asc", {
+      "caseSensitive": true,
+      "natural": true
+    }]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": [
+          ".",
+          "src",
+          "node_modules"
+        ]
+      }
+    }
+  }
+}

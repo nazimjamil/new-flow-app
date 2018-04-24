@@ -1,0 +1,16 @@
+# production
+dist
+lib
+
+# dependencies
+node_modules
+
+# misc
+*.log
+*.lock
+
+.DS_Store
+.nvm.local
+.*-lock
+coverage
+flow-typed
