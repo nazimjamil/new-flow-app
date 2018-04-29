@@ -10,7 +10,7 @@
     "postinstall": "yarn run flow:stub",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "lint": "yarn run eslint --config .eslintrc.json app __tests__ && yarn run flow",
+    "lint": "yarn run eslint --config .eslintrc.json --ext .jsx --ext .js app __tests__ && yarn run flow",
     "flow:stub": "yarn run flow-typed install"
   },
   "dependencies": {

@@ -3,13 +3,24 @@
     "es6": true,
     "browser": true
   },
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended"
+  ],
   "globals": {
     "describe": true,
     "document": true,
     "expect": true,
     "it": true
   },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "react"
+  ],
   "rules": {
     "arrow-body-style": 1,
     "import/no-extraneous-dependencies": ["error", {
