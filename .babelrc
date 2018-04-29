@@ -5,8 +5,8 @@
         "modules": false
       }
     ],
-    "react",
     "flow",
+    "react",
     "es2015"
   ],
   "env": {
