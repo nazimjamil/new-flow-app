@@ -2,13 +2,14 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Routes from 'router';
 import 'styles/main.css';
 
 let node = document.getElementById('root');
 
 if (node) {
   ReactDOM.render(
-    <h1>Hello, world!</h1>,
+    Routes,
     node
   );
 } else {

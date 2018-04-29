@@ -6,6 +6,9 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import * as packageJson from './package.json';
 
 const config = {
+  devServer: {
+    historyApiFallback: true,
+  },
   devtool: 'inline-source-map',
   entry: './app/index.jsx',
   module: {
