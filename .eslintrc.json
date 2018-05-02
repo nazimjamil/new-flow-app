@@ -3,13 +3,26 @@
     "es6": true,
     "browser": true
   },
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended"
+  ],
   "globals": {
     "describe": true,
     "document": true,
     "expect": true,
     "it": true
   },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "flowtype",
+    "react"
+  ],
   "rules": {
     "arrow-body-style": 1,
     "import/no-extraneous-dependencies": ["error", {
@@ -17,6 +30,7 @@
     }],
     "import/prefer-default-export": 0,
     "newline-after-var": ["error", "always"],
+    "react/jsx-filename-extension": 0,
     "sort-keys": ["error", "asc", {
       "caseSensitive": true,
       "natural": true
@@ -31,6 +45,9 @@
           "node_modules"
         ]
       }
+    },
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": false
     }
   }
 }
