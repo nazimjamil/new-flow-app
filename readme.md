@@ -50,3 +50,9 @@ Run the build command and take a look at `/dist`
 ```
 yarn run build
 ```
+
+A `postbuild` step runs `react-snap` which will create a static site within the dist folder.
+If you would like to verify the static site locally, you can do so by running the following
+```
+yarn run start:dist
+```
