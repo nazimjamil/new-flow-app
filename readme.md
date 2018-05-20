@@ -78,4 +78,4 @@ yarn run start:dist
 
 ---
 
-new-flow-app is open source software [licensed as MIT](https://github.com/nazimjamil.com/new-flow-app/blob/master/license).
+new-flow-app is open source software [licensed as MIT](https://github.com/nazimjamil/new-flow-app/blob/master/license.md).
