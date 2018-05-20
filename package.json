@@ -61,10 +61,6 @@
     ]
   },
   "reactSnap": {
-    "source": "dist",
-    "minifyHtml": {
-      "collapseWhitespace": false,
-      "removeComments": false
-    }
+    "source": "dist"
   }
 }
