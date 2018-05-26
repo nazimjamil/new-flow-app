@@ -11,7 +11,8 @@
     "describe": true,
     "document": true,
     "expect": true,
-    "it": true
+    "it": true,
+    "$ReadOnlyArray": true
   },
   "parser": "babel-eslint",
   "parserOptions": {
