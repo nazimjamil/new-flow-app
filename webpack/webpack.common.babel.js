@@ -3,13 +3,9 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import * as packageJson from './package.json';
+import * as packageJson from '../package.json';
 
 const config = {
-  devServer: {
-    historyApiFallback: true,
-  },
-  devtool: 'inline-source-map',
   entry: './app/index.jsx',
   module: {
     rules: [
@@ -31,14 +27,19 @@ const config = {
               sourceMap: true,
             },
           },
-          'postcss-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: 'inline',
+            },
+          },
         ],
       },
     ],
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '..', 'dist'),
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -57,7 +58,7 @@ const config = {
     ],
     modules: [
       '.',
-      'src',
+      'app',
       'node_modules',
     ],
   },
