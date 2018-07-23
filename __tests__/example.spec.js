@@ -1,13 +1,11 @@
-// @flow
+import React from 'react';
+import { shallow } from 'enzyme';
+import DocumentTitle from 'react-document-title';
 
-describe('this is a test spec', () => {
-  const element = document.createElement('div');
+describe('Testing a react component', () => {
+  it('contains the correct title', () => {
+    const wrapper = shallow(<DocumentTitle title="Test" />);
 
-  it('should assert true === true', () => {
-    expect(true).toEqual(true);
-  });
-
-  it('should not be null', () => {
-    expect(element).not.toBeNull();
+    expect(wrapper.prop('title')).toEqual('Test');
   });
 });

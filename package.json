@@ -1,7 +1,7 @@
 {
   "name": "new-flow-app",
   "version": "1.2.0",
-  "main": "app/index.js",
+  "main": "app/index.jsx",
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack/webpack.dev.babel.js",
@@ -17,8 +17,9 @@
   },
   "dependencies": {
     "react": "^16.3.2",
+    "react-document-title": "^2.0.3",
     "react-dom": "^16.3.2",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -31,6 +32,8 @@
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
     "css-loader": "^0.28.11",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-flowtype": "^2.46.3",
@@ -58,9 +61,11 @@
   "jest": {
     "moduleDirectories": [
       ".",
-      "src",
+      "app",
       "node_modules"
-    ]
+    ],
+    "testRegex": "(spec.js)",
+    "setupTestFrameworkScriptFile": "./__tests__/jest.config.js"
   },
   "reactSnap": {
     "source": "dist"
