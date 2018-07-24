@@ -59,13 +59,19 @@
     "webpack-merge": "^4.1.2"
   },
   "jest": {
+    "collectCoverageFrom": ["<rootDir>/app/**/*.{js,jsx}"],
+    "coverageDirectory": "<rootDir>/dist/__coverage__",
     "moduleDirectories": [
       ".",
       "app",
       "node_modules"
     ],
-    "testRegex": "(spec.js)",
-    "setupTestFrameworkScriptFile": "./__tests__/jest.config.js"
+    "moduleFileExtensions": ["js", "jsx"],
+    "notify": true,
+    "roots": [
+      "<rootDir>/__tests__/unit"
+    ],
+    "setupFiles": ["<rootDir>/__tests__/jest.config.js"]
   },
   "reactSnap": {
     "source": "dist"
