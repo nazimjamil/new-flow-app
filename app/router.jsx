@@ -2,22 +2,29 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import DocumentTitle from 'react-document-title';
 import AppContext from 'appContext';
 
-type RouteT = {
-  match: {
-    params: {
-      id: string,
-    },
+type MatchT = {
+  params: {
+    id: string,
   },
 };
 
-const Home = () => (
-  <h1>Hello, new world!</h1>
+type LocationT = {
+  pathname: string,
+};
+
+const Home = ({ location }: { location: LocationT }) => (
+  <DocumentTitle title={`App ${location.pathname}`}>
+    <h1>Hello, new world!</h1>
+  </DocumentTitle>
 );
 
-const Param = ({ match }: RouteT) => (
-  <h1>Hello, {match.params.id}!</h1>
+const Param = ({ match, location }: { match: MatchT, location: LocationT }) => (
+  <DocumentTitle title={`App ${location.pathname}`}>
+    <h1>Hello, {match.params.id}!</h1>
+  </DocumentTitle>
 );
 
 const Data = () => (
