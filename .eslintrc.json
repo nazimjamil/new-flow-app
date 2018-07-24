@@ -21,11 +21,13 @@
     }
   },
   "plugins": [
-    "flowtype",
+    "flowtype-errors",
     "react"
   ],
   "rules": {
     "arrow-body-style": 1,
+    "flowtype-errors/show-errors": 1,
+    "flowtype-errors/show-warnings": 1,
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": true
     }],

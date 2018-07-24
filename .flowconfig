@@ -10,8 +10,11 @@ flow-typed
 [libs]
 
 [lints]
+all=off
+💩 handled by eslint
 
 [options]
 module.system.node.resolve_dirname=app
+include_warnings=true
 
 [strict]

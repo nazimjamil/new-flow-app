@@ -11,7 +11,7 @@
     "postinstall": "yarn run flow:stub",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "lint": "yarn run eslint --config .eslintrc.json --ext .jsx --ext .js app __tests__ && yarn run flow",
+    "lint": "yarn run eslint --config .eslintrc.json --ext .jsx --ext .js app __tests__",
     "flow:stub": "yarn run flow-typed install",
     "start:dist": "yarn run simple-server dist 8080"
   },
@@ -36,7 +36,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-flowtype": "^2.46.3",
+    "eslint-plugin-flowtype-errors": "^3.6.0",
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
@@ -59,19 +59,26 @@
     "webpack-merge": "^4.1.2"
   },
   "jest": {
-    "collectCoverageFrom": ["<rootDir>/app/**/*.{js,jsx}"],
+    "collectCoverageFrom": [
+      "<rootDir>/app/**/*.{js,jsx}"
+    ],
     "coverageDirectory": "<rootDir>/dist/__coverage__",
     "moduleDirectories": [
       ".",
       "app",
       "node_modules"
     ],
-    "moduleFileExtensions": ["js", "jsx"],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
     "notify": true,
     "roots": [
       "<rootDir>/__tests__/unit"
     ],
-    "setupFiles": ["<rootDir>/__tests__/jest.config.js"]
+    "setupFiles": [
+      "<rootDir>/__tests__/jest.config.js"
+    ]
   },
   "reactSnap": {
     "source": "dist"
