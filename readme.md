@@ -74,6 +74,31 @@ If you would like to verify the static site locally, you can do so by running th
 yarn run start:dist
 ```
 
+## VSCode setup
+
+---
+
+I recommend using VSCode, if you do here is a configuration
+```
+{
+  "flow.pathToFlow": "./node_modules/.bin/flow",
+  "flow.useNPMPackagedFlow": true,
+  "flow.enabled": true,
+  "flow.runOnEdit": true,
+  "flow.showStatus": true,
+  "javascript.validate.enable": false,
+  "eslint.enable": true,
+  "eslint.options": {
+    "configFile": "./.eslintrc.json"
+  },
+  "files.associations": {
+    "*.css": "postcss"
+  }
+}
+
+```
+
+
 ## License
 
 ---

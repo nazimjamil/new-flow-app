@@ -1,0 +1,15 @@
+{
+  "flow.pathToFlow": "./node_modules/.bin/flow",
+  "flow.useNPMPackagedFlow": true,
+  "flow.enabled": true,
+  "flow.runOnEdit": true,
+  "flow.showStatus": true,
+  "javascript.validate.enable": false,
+  "eslint.enable": true,
+  "eslint.options": {
+    "configFile": "./.eslintrc.json"
+  },
+  "files.associations": {
+    "*.css": "postcss"
+  }
+}
