@@ -36,11 +36,11 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-flowtype": "^2.46.3",
+    "eslint-plugin-flowtype": "^3.6.1",
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
-    "flow-bin": "^0.70.0",
+    "flow-bin": "^0.97.0",
     "flow-typed": "^2.4.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^22.4.3",
@@ -59,19 +59,26 @@
     "webpack-merge": "^4.1.2"
   },
   "jest": {
-    "collectCoverageFrom": ["<rootDir>/app/**/*.{js,jsx}"],
+    "collectCoverageFrom": [
+      "<rootDir>/app/**/*.{js,jsx}"
+    ],
     "coverageDirectory": "<rootDir>/dist/__coverage__",
     "moduleDirectories": [
       ".",
       "app",
       "node_modules"
     ],
-    "moduleFileExtensions": ["js", "jsx"],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
     "notify": true,
     "roots": [
       "<rootDir>/__tests__/unit"
     ],
-    "setupFiles": ["<rootDir>/__tests__/jest.config.js"]
+    "setupFiles": [
+      "<rootDir>/__tests__/jest.config.js"
+    ]
   },
   "reactSnap": {
     "source": "dist"

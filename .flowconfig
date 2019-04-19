@@ -8,10 +8,15 @@ app
 flow-typed
 
 [libs]
+<PROJECT_ROOT>/node_modules/**/*.js.flow
 
 [lints]
 
 [options]
 module.system.node.resolve_dirname=app
+emoji=true
 
 [strict]
+
+[untyped]
+.*/node_modules/**/.*
